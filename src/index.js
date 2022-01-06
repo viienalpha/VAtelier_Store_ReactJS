@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import './assets/boxicons-2.1.1/css/boxicons.min.css'
+import './scss/index.scss'
 import Layout from './components/Layout'
 
 ReactDOM.render(
