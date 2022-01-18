@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-import logo from '../assets/images/be-4.svg'
+import logo from '../assets/images/logo/atelierwhite.png'
 const mainNav = [
     {
         display: "Trang chủ",
@@ -12,7 +12,7 @@ const mainNav = [
         path: "/catalog"
     },
     {
-        display: "Phụ kiện",
+        display: "Bộ sưu tập",
         path: "/accessories"
     },
     {
@@ -44,7 +44,7 @@ const Header = () => {
     return (
         <div className="header " ref={ref}>
             <div className="container">
-                <div className='header__logo'>
+                <div className="header__logo">
                     <Link to="/#">
                         <img src={logo} alt="" />
                     </Link>
@@ -58,11 +58,17 @@ const Header = () => {
                         <div className="header__menu__left__close" onClick={menuToggle}>
                             <i className='bx bx-chevron-left'></i>
                         </div>
+                        <div className={`header__menu__item header__menu__left__item`}
+                        >
+                            <Link to="/#">
+                                <img src={logo} height={50}  alt="" />
+                            </Link>
+                        </div>
                         {
                             mainNav.map((nav, index) => (
-                                <div key={index} 
-                                className={`header__menu__item header__menu__left__item ${index === activeNav ? 'active' : ''}`}
-                                onClick={menuToggle}
+                                <div key={index}
+                                    className={`header__menu__item header__menu__left__item ${index === activeNav ? 'active' : ''}`}
+                                    onClick={menuToggle}
                                 >
                                     <Link to={nav.path}>
                                         <span>{nav.display}</span>
@@ -81,7 +87,7 @@ const Header = () => {
                             </Link>
                         </div>
                         <div className="header__menu__item hearder__menu__right_item">
-                            <i className="bx bx-search"></i>
+                            <i className='bx bx-user'></i>
                         </div>
                     </div>
                 </div>
