@@ -1,0 +1,40 @@
+.card-info {
+    @include flex(center, flex-start);
+    padding: 20px;
+    padding-left: 0;
+    box-shadow: $box-shadow;
+    transition: transform 0.5s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    &:hover {
+        transform: translateY(-20px);
+    }
+
+    &__icon {
+        @include flex(center, center);
+        width: 40%;
+        color: $main-color;
+
+        i {
+            font-size: 3rem;
+        }
+    }
+
+    &__info {
+        &__name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        &__description {
+            font-size: 1rem;
+            color: $txt-second-color;
+        }
+    }
+}
+

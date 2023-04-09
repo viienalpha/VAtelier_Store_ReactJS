@@ -1,0 +1,32 @@
+.section {
+    margin-bottom: 80px;
+
+    & > * ~ * {
+        margin-top: 70px;
+    }
+
+    &__title {
+        font-size: 2rem;
+        text-transform: capitalize;
+        text-align: center;
+        color: #fff;
+    }
+}
+.banner__new__year{
+    position:absolute;
+    left: 0;
+    width: 100%
+}
+.banner{
+    margin-bottom: 50px;
+    height: 300px;
+    @include tablet{
+    height: 180px;
+    margin-bottom: 30px;
+    }
+    @include mobile{
+        height: 100px;
+    margin-bottom: 10px;
+
+    }
+}
